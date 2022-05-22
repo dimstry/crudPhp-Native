@@ -12,7 +12,7 @@
         <td>{$key['kelas']}</td>
         <td>{$key['jurusan']}</td>
         <td class='text-center'>
-          <a class='btn btn-success rounded-circle m-1' href='t.php'><i class='bx bx-edit-alt'></i></a>
+          <a class='btn btn-success rounded-circle m-1' href='edit.php?i={$key['id_siswa']}'><i class='bx bx-edit-alt'></i></a>
           <a class='btn btn-danger rounded-circle m-1' href='hapus.php?i={$key['id_siswa']}'><i class='bx bx-trash-alt' ></i></a>
    
         </td>
