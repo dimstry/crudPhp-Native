@@ -1,5 +1,24 @@
 <?php
-include("koneksi.php");
+  include("koneksi.php");
+  $query_select="SELECT * FROM siswa";
+  $tampil=mysqli_query($koneksi,$query_select);
+  foreach ($tampil as $key )
+  {
+   	$nomor++;
+   	$t.="
+      <tr>
+        <td>$nomor</td>
+        <td>{$key['nama']}</td>
+        <td>{$key['kelas']}</td>
+        <td>{$key['jurusan']}</td>
+      </tr>
+      <tr>
+        <th scope='row'></th>
+        <td colspan='2'>Jumlah</td>
+        <td class='text-center'>$nomor</td>
+      </tr>
+	";
+  }
 echo "
   <!DOCTYPE html>
   <html lang='en'>
@@ -16,30 +35,14 @@ echo "
       <table class='table table-bordered'>
         <thead>
           <tr>
-            <th scope='col'>#</th>
-            <th scope='col'>First</th>
-            <th scope='col'>Last</th>
-            <th scope='col'>Handle</th>
+            <th scope='col'>No</th>
+            <th scope='col'>Nama</th>
+            <th scope='col'>Kelas</th>
+            <th scope='col'>Jurusan</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope='row'>1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope='row'>2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope='row'>3</th>
-            <td colspan='2'>Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+         $t
         </tbody>
       </table>
     </div>
