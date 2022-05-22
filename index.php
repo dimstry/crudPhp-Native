@@ -13,11 +13,7 @@
         <td>{$key['jurusan']}</td>
         <td>Edit | Hapus</td>
       </tr>
-      <tr>
-        <th scope='row'></th>
-        <td colspan='2'>Jumlah</td>
-        <td class='text-center'>$nomor</td>
-      </tr>
+
 	";
   }
 echo "
@@ -45,6 +41,11 @@ echo "
         </thead>
         <tbody>
          $t
+        <tr>
+          <th scope='row'></th>
+          <td colspan='2'>Jumlah</td>
+          <td class='text-center'>$nomor</td>
+        </tr>
         </tbody>
       </table>
       <a class='btn btn-primary' href='tambah.php'>Tambah</a>
