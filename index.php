@@ -11,6 +11,7 @@
         <td>{$key['nama']}</td>
         <td>{$key['kelas']}</td>
         <td>{$key['jurusan']}</td>
+        <td>Edit | Hapus</td>
       </tr>
       <tr>
         <th scope='row'></th>
@@ -39,12 +40,14 @@ echo "
             <th scope='col'>Nama</th>
             <th scope='col'>Kelas</th>
             <th scope='col'>Jurusan</th>
+            <th scope='col'>Aksi</th>
           </tr>
         </thead>
         <tbody>
          $t
         </tbody>
       </table>
+      <a class='btn btn-primary' href='tambah.php'>Tambah</a>
     </div>
     <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js'></script>
